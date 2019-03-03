@@ -6,7 +6,10 @@
     "homepage_url": "https://inko.holy.kiwi",
     "browser_action": {
         "default_title": "inko",
-        "default_popup": "index.html"
+        "default_popup": "popup.html",
+        "default_icon": {
+            "128": "images/inko_128.png"
+        }
     },
     "background": {
         "scripts": [
