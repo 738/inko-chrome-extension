@@ -11,12 +11,6 @@
             "128": "images/inko_128.png"
         }
     },
-    "background": {
-        "scripts": [
-            "background.js"
-        ],
-        "persistent": true
-    },
     "permissions": [
         "tabs",
         "http://*/*",
