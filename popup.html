@@ -4,20 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>example</title>
+    <style>
+        body {
+            width: 300px;
+            height: 100%;
+            text-align: center;
+            background: linear-gradient(rgb(247, 223, 182), rgb(247, 168, 252));
+        }
+    </style>
 </head>
 <body>
 <h1>Inko 한영타변환기</h1>
-<h2>영타 -> 한글</h2>
+<h2>영타</h2>
 <textarea id="englishInput" type="text" value=""></textarea>
 <br />
 <div id="koreanOutput"></div>
-<button id="koreanOutputCopyButton">복사</button>
+<button id="englishCopyButton">복사</button>
 
-<h2>한타 -> 영어</h2>
+<h2>한타</h2>
 <textarea id="koreanInput" type="text" value=""></textarea>
 <br />
 <div id="englishOutput"></div>
-<button id="englishOutputCopyButton">복사</button>
+<button id="koreanCopyButton">복사</button>
 
 <script src="inko.js"></script>
 <script src="popup.js"></script>

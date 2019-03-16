@@ -1,25 +1,25 @@
 let inko = new Inko();
 let englishInput = document.getElementById('englishInput');
 let koreanInput = document.getElementById('koreanInput');
-let koreanOutputCopyButton = document.getElementById('koreanOutputCopyButton');
-let englishOutputCopyButton = document.getElementById('englishOutputCopyButton');
+let englishCopyButton = document.getElementById('englishCopyButton');
+let koreanCopyButton = document.getElementById('koreanCopyButton');
 
 englishInput.onkeyup = function(element) {
     let input =  element.target.value;
-    document.getElementById("koreanOutput").innerHTML = inko.en2ko(input);
+    koreanInput.value = inko.en2ko(input);
 }
 
 koreanInput.onkeyup = function(element) {
     let input =  element.target.value;
-    document.getElementById("englishOutput").innerHTML = inko.ko2en(input);
+    englishInput.value = inko.ko2en(input);
 }
 
-koreanOutputCopyButton.onclick = function(element) {
-    copyToClipboard(document.getElementById("koreanOutput").innerHTML)
+englishCopyButton.onclick = function(element) {
+    copyToClipboard(englishInput.value)
 }
 
-englishOutputCopyButton.onclick = function(element) {
-    copyToClipboard(document.getElementById("englishOutput").innerHTML)
+koreanCopyButton.onclick = function(element) {
+    copyToClipboard(koreanInput.value)
 }
 
 // 클립보드에 텍스트 복사하는 함수
