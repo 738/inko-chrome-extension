@@ -1,5 +1,6 @@
 <!Doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,23 +12,50 @@
             text-align: center;
             background: linear-gradient(rgb(247, 223, 182), rgb(247, 168, 252));
         }
+
+        div.textarea-container {
+            border-radius: 30px;
+            border: 0px;
+            background: rgba(255, 251, 217, 0.5);
+            padding: 15px 35px;
+            margin: 0 20px;
+            box-shadow: 0 50px 80px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            height: 200px;
+        }
+
+        textarea {
+            border: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+        }
     </style>
 </head>
+
 <body>
-<h1>Inko 한영타변환기</h1>
-<h2>영타</h2>
-<textarea id="englishInput" type="text" value=""></textarea>
-<br />
-<div id="koreanOutput"></div>
-<button id="englishCopyButton">복사</button>
+    <h1>Inko 한영타변환기</h1>
+    <h2>영타</h2>
+    <div class="textarea-container">
+        <textarea id="englishInput" type="text" value=""></textarea>
+    </div>
+    <br />
+    <div id="koreanOutput"></div>
+    <button id="englishCopyButton">복사</button>
 
-<h2>한타</h2>
-<textarea id="koreanInput" type="text" value=""></textarea>
-<br />
-<div id="englishOutput"></div>
-<button id="koreanCopyButton">복사</button>
+    <h2>한타</h2>
+    <div class="textarea-container">
+        <textarea id="koreanInput" type="text" value=""></textarea>
+    </div>
+    <br />
+    <div id="englishOutput"></div>
+    <button id="koreanCopyButton">복사</button>
 
-<script src="inko.js"></script>
-<script src="popup.js"></script>
+    <script src="inko.js"></script>
+    <script src="popup.js"></script>
 </body>
+
 </html>
