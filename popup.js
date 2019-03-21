@@ -6,6 +6,9 @@ let outputLabel = document.getElementById('outputLabel');
 let clipboard_copy = document.getElementById('clipboard_copy');
 let erase = document.getElementById('erase');
 let arrow = document.getElementById('arrow');
+let inkoLogo = document.getElementById('inkoLogo');
+let githubLogo = document.getElementById('githubLogo');
+
 
 isEn2koMode = true;
 
@@ -25,6 +28,14 @@ erase.onclick = function(_) {
 
 arrow.onclick = function(_) {
     toggleEn2koMode();
+}
+
+inkoLogo.onclick = function(_) {
+    window.open('https://inko.holy.kiwi');
+}
+
+githubLogo.onclick = function(_) {
+    window.open('https://github.com/738/inko');
 }
 
 // 클립보드에 텍스트 복사하는 함수
