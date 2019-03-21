@@ -38,7 +38,7 @@
         }
 
         div.label-language {
-            font-size: 14px;
+            font-size: 18px;
             margin-bottom: 10px;
         }
 
@@ -51,6 +51,18 @@
             resize: none;
             outline: none;
         }
+
+        img#erase {
+            position: absolute;
+            top: 12px;
+            right: 15px;
+        }
+
+        img#clipboard_copy {
+            position: absolute;
+            top: 12px;
+            right: 15px;
+        }
     </style>
 </head>
 
@@ -59,6 +71,7 @@
     <div class="textarea-container">
         <div class="label-language">영어</div>
         <textarea id="englishInput" type="text" value=""></textarea>
+        <img id="erase" src="images/erase.svg" width=20/>
     </div>
     <br />
     <div id="koreanOutput"></div>
@@ -67,6 +80,7 @@
     <div class="textarea-container">
         <div class="label-language">한글</div>
         <textarea id="koreanInput" type="text" value=""></textarea>
+        <img id="clipboard_copy" src="images/clipboard_copy.svg" width=15/>
     </div>
     <br />
     <div id="englishOutput"></div>
