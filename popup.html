@@ -13,15 +13,33 @@
             background: linear-gradient(rgb(247, 223, 182), rgb(247, 168, 252));
         }
 
+        img#inko-logo {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        img#arrow {
+            transform: rotate(90deg);
+            margin-bottom: 15px;
+        }
+
         div.textarea-container {
             border-radius: 30px;
             border: 0px;
             background: rgba(255, 251, 217, 0.5);
-            padding: 15px 20px;
+            padding: 12px 20px;
             margin: 0 20px;
             box-shadow: 0 50px 80px rgba(0, 0, 0, 0.1);
             width: 70%;
             height: 150px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div.label-language {
+            font-size: 14px;
+            margin-bottom: 10px;
         }
 
         textarea {
@@ -37,22 +55,21 @@
 </head>
 
 <body>
-    <h1>Inko 한영타변환기</h1>
-    <h2>영타</h2>
+    <img id="inko-logo" src="./images/inko_logo.png" width=75/>
     <div class="textarea-container">
+        <div class="label-language">영어</div>
         <textarea id="englishInput" type="text" value=""></textarea>
     </div>
     <br />
     <div id="koreanOutput"></div>
-    <button id="englishCopyButton">복사</button>
+    <img id="arrow" src="images/arrow.svg" width=30/>
 
-    <h2>한타</h2>
     <div class="textarea-container">
+        <div class="label-language">한글</div>
         <textarea id="koreanInput" type="text" value=""></textarea>
     </div>
     <br />
     <div id="englishOutput"></div>
-    <button id="koreanCopyButton">복사</button>
 
     <script src="inko.js"></script>
     <script src="popup.js"></script>
