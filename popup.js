@@ -1,25 +1,30 @@
 let inko = new Inko();
-let englishInput = document.getElementById('englishInput');
-let koreanInput = document.getElementById('koreanInput');
-let englishCopyButton = document.getElementById('englishCopyButton');
-let koreanCopyButton = document.getElementById('koreanCopyButton');
+let inkoInput = document.getElementById('inkoInput');
+let inkoOutput = document.getElementById('inkoOutput');
+let inputLabel = document.getElementById('inputLabel');
+let outputLabel = document.getElementById('outputLabel');
+let clipboard_copy = document.getElementById('clipboard_copy');
+let erase = document.getElementById('erase');
+let arrow = document.getElementById('arrow');
 
-englishInput.onkeyup = function(element) {
+isEn2koMode = true;
+
+inkoInput.onkeyup = function(element) {
     let input =  element.target.value;
-    koreanInput.value = inko.en2ko(input);
+    inkoOutput.value = isEn2koMode ? inko.en2ko(input) : inko.ko2en(input);
 }
 
-koreanInput.onkeyup = function(element) {
-    let input =  element.target.value;
-    englishInput.value = inko.ko2en(input);
+clipboard_copy.onclick = function(_) {
+    copyToClipboard(inkoOutput.value);
 }
 
-englishCopyButton.onclick = function(element) {
-    copyToClipboard(englishInput.value)
+erase.onclick = function(_) {
+    inkoInput.value = '';
+    inkoOutput.value = '';
 }
 
-koreanCopyButton.onclick = function(element) {
-    copyToClipboard(koreanInput.value)
+arrow.onclick = function(_) {
+    toggleEn2koMode();
 }
 
 // 클립보드에 텍스트 복사하는 함수
@@ -34,4 +39,25 @@ function copyToClipboard(text) {
     textField.select();
     document.execCommand('copy');
     textField.remove();
+}
+
+function toggleEn2koMode() {
+    if (isEn2koMode) {
+        isEn2koMode = false;
+        inputLabel.innerHTML = '한글';
+        outputLabel.innerHTML = '영어';
+        changeInputAndOutput();
+    } else {
+        isEn2koMode = true;
+        inputLabel.innerHTML = '영어';
+        outputLabel.innerHTML = '한글';
+        changeInputAndOutput();
+    }
+}
+
+function changeInputAndOutput() {
+    let tmp = inkoInput.value;
+    inkoInput.value = inkoOutput.value;
+    inkoOutput.value = tmp;
+    convert = inko.ko2en;
 }

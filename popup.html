@@ -20,17 +20,20 @@
         img#inko-logo {
             margin-top: 10px;
             margin-bottom: 10px;
+            cursor: pointer;
         }
 
         img#github-logo {
             position: fixed;
             top: 15px;
             right: 15px;
+            cursor: pointer;
         }
 
         img#arrow {
             transform: rotate(90deg);
             margin-bottom: 15px;
+            cursor: pointer;
         }
 
         div.textarea-container {
@@ -66,12 +69,14 @@
             position: absolute;
             top: 12px;
             right: 15px;
+            cursor: pointer;
         }
 
         img#clipboard_copy {
             position: absolute;
             top: 12px;
             right: 15px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -80,18 +85,18 @@
     <img id="inko-logo" src="./images/inko_logo.png" width=75></img>
     <img id="github-logo" src="./images/github_logo.svg" width=15/>
     <div class="textarea-container">
-        <div class="label-language">영어</div>
-        <textarea id="englishInput" type="text" value=""></textarea>
-        <img id="erase" src="images/erase.svg" width=20/>
+        <div id="inputLabel" class="label-language">영어</div>
+        <textarea id="inkoInput" type="text" value=""></textarea>
+        <img id="erase" src="./images/erase.svg" width=20/>
     </div>
     <br />
     <div id="koreanOutput"></div>
-    <img id="arrow" src="images/arrow.svg" width=30/>
+    <img id="arrow" src="./images/arrow.svg" width=30/>
 
     <div class="textarea-container">
-        <div class="label-language">한글</div>
-        <textarea id="koreanInput" type="text" value=""></textarea>
-        <img id="clipboard_copy" src="images/clipboard_copy.svg" width=15/>
+        <div id="outputLabel" class="label-language">한글</div>
+        <textarea id="inkoOutput" type="text" value="" readonly ></textarea>
+        <img id="clipboard_copy" src="./images/clipboard_copy.svg" width=15/>
     </div>
     <br />
     <div id="englishOutput"></div>
