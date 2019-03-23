@@ -8,7 +8,7 @@ let erase = document.getElementById('erase');
 let arrow = document.getElementById('arrow');
 let inkoLogo = document.getElementById('inkoLogo');
 let githubLogo = document.getElementById('githubLogo');
-
+let toastMessage = document.getElementById('toastMessage');
 
 isEn2koMode = true;
 

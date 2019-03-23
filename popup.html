@@ -78,6 +78,20 @@
             right: 15px;
             cursor: pointer;
         }
+        
+        #toastMessage {
+            background-color: #ff6b8150;
+            color: #2f3542;
+            padding-top: 8px;
+            width: 200px;
+            height: 25px;
+            font-size: 14px;
+            border-radius: 15px;
+
+            position: fixed;
+            bottom: 50px;
+            left: calc(50% - (200px / 2));
+        }
     </style>
 </head>
 
@@ -100,6 +114,7 @@
     </div>
     <br />
     <div id="englishOutput"></div>
+    <div id="toastMessage">클립보드에 복사되었습니다.</div>
 
     <script src="inko.js"></script>
     <script src="popup.js"></script>
