@@ -21,8 +21,6 @@
         "128": "images/inko_128.png"
     },
     "permissions": [
-        "tabs",
-        "http://*/*",
-        "https://*/*"
+        "activeTab"
     ]
 }
