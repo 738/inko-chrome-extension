@@ -12,6 +12,9 @@ let toastMessage = document.getElementById('toastMessage');
 
 let isEn2koMode = true;
 let isToastMessageShown = false;
+let version = '';
+
+readJSON('./manifest.json');
 
 inkoInput.onkeyup = function(element) {
     let input =  element.target.value;
@@ -26,7 +29,7 @@ clipboard_copy.onclick = function(_) {
 erase.onclick = function(_) {
     inkoInput.value = '';
     inkoOutput.value = '';
-    showToastMessage('입력값이 지워졌습니다');
+    showToastMessage('내용을 지웁니다');
 }
 
 arrow.onclick = function(_) {
@@ -85,4 +88,22 @@ function changeInputAndOutput() {
     inkoInput.value = inkoOutput.value;
     inkoOutput.value = tmp;
     convert = inko.ko2en;
+}
+
+function readJSON(path) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', path, true);
+    xhr.responseType = 'blob';
+    xhr.onload = function(e) { 
+      if (this.status == 200) {
+          var file = new File([this.response], 'temp');
+          var fileReader = new FileReader();
+          fileReader.addEventListener('load', function(){
+              version = JSON.parse(fileReader.result) ? JSON.parse(fileReader.result).version : '';
+              document.getElementById('version').innerHTML = `v ${version}`;
+          });
+          fileReader.readAsText(file);
+      } 
+    }
+    xhr.send();
 }

@@ -17,6 +17,14 @@
             align-items: center;
         }
 
+        #version {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #34495e;
+        }
+
         img#inkoLogo {
             margin-top: 10px;
             margin-bottom: 10px;
@@ -129,6 +137,7 @@
 <body>
     <img id="inkoLogo" src="./images/inko_logo.png" width=75></img>
     <img id="githubLogo" src="./images/github_logo.svg" width=15/>
+    <div id="version"></div>
     <div class="textarea-container">
         <div id="inputLabel" class="label-language">영어</div>
         <textarea id="inkoInput" type="text" value=""></textarea>

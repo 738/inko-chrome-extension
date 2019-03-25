@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Inko 한영타변환기",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "한영타 변환 라이브러리 Inko를 사용한 한영타 변환기",
     "homepage_url": "https://inko.holy.kiwi",
     "browser_action": {
