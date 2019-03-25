@@ -10,7 +10,8 @@ let inkoLogo = document.getElementById('inkoLogo');
 let githubLogo = document.getElementById('githubLogo');
 let toastMessage = document.getElementById('toastMessage');
 
-isEn2koMode = true;
+let isEn2koMode = true;
+let isToastMessageShown = false;
 
 inkoInput.onkeyup = function(element) {
     let input =  element.target.value;
@@ -19,11 +20,13 @@ inkoInput.onkeyup = function(element) {
 
 clipboard_copy.onclick = function(_) {
     copyToClipboard(inkoOutput.value);
+    showToastMessage('클립보드에 복사되었습니다');
 }
 
 erase.onclick = function(_) {
     inkoInput.value = '';
     inkoOutput.value = '';
+    showToastMessage('입력값이 지워졌습니다');
 }
 
 arrow.onclick = function(_) {
@@ -36,6 +39,17 @@ inkoLogo.onclick = function(_) {
 
 githubLogo.onclick = function(_) {
     window.open('https://github.com/738/inko');
+}
+
+function showToastMessage(msg) {
+    toastMessage.innerHTML = msg;
+    if (isToastMessageShown) return;
+    isToastMessageShown = true;
+    toastMessage.classList.add('show');
+    setTimeout(function() {
+        isToastMessageShown = false;
+        toastMessage.classList.remove('show');
+    }, 2700);
 }
 
 // 클립보드에 텍스트 복사하는 함수

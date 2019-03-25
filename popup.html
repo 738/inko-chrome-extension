@@ -80,17 +80,48 @@
         }
         
         #toastMessage {
-            background-color: #ff6b8150;
+            visibility: hidden;
+            background-color: #fab1a0;
             color: #2f3542;
             padding-top: 8px;
-            width: 200px;
+            padding-left: 10px;
+            padding-right: 10px;
+            min-width: 150px;
             height: 25px;
             font-size: 14px;
             border-radius: 15px;
 
             position: fixed;
             bottom: 50px;
-            left: calc(50% - (200px / 2));
+            left: 50%;
+            transform: translateX(-50%);
+
+            z-index: 1;
+        }
+
+        #toastMessage.show {
+            visibility: visible;
+            animation: fade-in 700ms, fade-out 700ms 2000ms;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
         }
     </style>
 </head>
@@ -114,7 +145,7 @@
     </div>
     <br />
     <div id="englishOutput"></div>
-    <div id="toastMessage">클립보드에 복사되었습니다.</div>
+    <div id="toastMessage"></div>
 
     <script src="inko.js"></script>
     <script src="popup.js"></script>
