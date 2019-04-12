@@ -18,6 +18,7 @@
 * [inko](https://github.com/738/inko)
 * [inko-cli](https://github.com/738/inko-cli)
 * [inko-web](https://github.com/738/inko-web)
+* [alfred-inko](https://github.com/738/alfred-inko)
 
 ## Contributing
 
