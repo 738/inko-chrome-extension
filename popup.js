@@ -37,7 +37,7 @@ arrow.onclick = function(_) {
 }
 
 inkoLogo.onclick = function(_) {
-    window.open('https://inko.holy.kiwi');
+    window.open('https://inko.js.org');
 }
 
 githubLogo.onclick = function(_) {

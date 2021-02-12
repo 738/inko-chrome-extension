@@ -3,7 +3,7 @@
 <img src="https://github.com/738/inko-chrome-extension/blob/master/images/inko-screenshot.png?raw=true" width=300 />
 
 * [inko 한영타변환기 크롬 확장프로그램](https://chrome.google.com/webstore/detail/inko-%ED%95%9C%EC%98%81%ED%83%80%EB%B3%80%ED%99%98%EA%B8%B0/bijdbcchfaolmleinaghdbnemmdabbmn?hl=ko)이 크롬 웹스토어에 배포되었습니다. (2019.03.25)
-* [inko Offical Website](https://inko.holy.kiwi)
+* [inko Offical Website](https://inko.js.org)
 
 ## Release Note
 
